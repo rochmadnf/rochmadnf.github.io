@@ -4,8 +4,8 @@
   "description": "My Personal Website",
   "main": "main.js",
   "scripts": {
-    "tail:maintain": "npx tailwindcss -i ./src/style.css -o ./maintenance/rochmad.css --jit --purge \"./maintenance/*.html\"",
-    "tail:full": "npx tailwindcss -i ./src/style.css -o ./maintenance/rochmad.css"
+    "tail:maintain": "npx tailwindcss -i ./src/style.css -o ./rochmad.css --jit --purge \"./**/*.html\"",
+    "tail:full": "npx tailwindcss -i ./src/style.css -o ./rochmad.css"
   },
   "repository": {
     "type": "git",
