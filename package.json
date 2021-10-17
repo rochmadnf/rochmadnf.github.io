@@ -1,0 +1,24 @@
+{
+  "name": "rochmadnf.github.io",
+  "version": "1.0.0",
+  "description": "My Personal Website",
+  "main": "main.js",
+  "scripts": {
+    "tail:maintain": "npx tailwindcss -i ./src/style.css -o ./maintenance/rochmad.css --jit --purge \"./maintenance/*.html\"",
+    "tail:full": "npx tailwindcss -i ./src/style.css -o ./maintenance/rochmad.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rochmadnf/rochmadnf.github.io.git"
+  },
+  "keywords": [
+    "personal",
+    "rochmad"
+  ],
+  "author": "Rochmad Nurul Fahmi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rochmadnf/rochmadnf.github.io/issues"
+  },
+  "homepage": "https://github.com/rochmadnf/rochmadnf.github.io#readme"
+}
