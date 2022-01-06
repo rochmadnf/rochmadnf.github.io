@@ -7,7 +7,7 @@
   <meta name="author" content="Rochmad Nurul Fahmi">
   <meta name="description" content="Rochmad Official Website">
   <meta name="geo.placename" content="Indonesia">
-  <link rel="icon" href="./assets/favicon.png">
+  <link rel="icon" href="./assets/images/favicon.png">
 
   <title>Rochmad Official &mdash; Home</title>
 
@@ -18,56 +18,161 @@
   <!-- js library -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/phosphor-icons"></script>
+
+  <style type="text/tailwindcss">
+    body {
+      @apply font-['Poppins','sans-serif'];
+    }
+
+    .main {
+      @apply w-screen h-screen bg-gradient-to-br from-sky-400 to-sky-300 flex justify-center items-center;
+    }
+
+    .box {
+      @apply w-3/4 h-4/5 rounded-2xl bg-gradient-to-br from-[rgba(255,255,255,.8)] to-[rgba(255,255,255,.3)] flex shadow-xl shadow-sky-500;
+    }
+    
+    .sidebar {
+      @apply h-full w-1/4 rounded-tl-[inherit] rounded-bl-[inherit] bg-gradient-to-br from-[rgba(255,255,255,.7)] to-[rgba(255,255,255,.2)] flex flex-col items-center justify-evenly;
+    }
+
+    .menus {
+      @apply flex flex-col gap-2 w-4/5;
+    }
+
+    .menu {
+      @apply flex items-center justify-between cursor-pointer text-gray-500 transition-colors duration-300 rounded-xl py-2 px-4;
+    }
+
+    .menu.active, .menu:hover {
+      @apply font-semibold text-white bg-gradient-to-br shadow-md shadow-sky-600 from-sky-300 to-sky-500;
+    }
+
+    
+    .menu i {
+      @apply text-2xl mr-1;
+    }
+    
+    .menu span {
+      @apply text-lg grow-[2] font-light;
+    }
+
+    .content {
+      @apply h-full w-3/4 flex justify-center items-center;
+    }
+
+    .content .info {
+      @apply flex items-center text-4xl text-sky-500;
+    }
+
+    .side-bottom, .header {
+      @apply hidden;
+    }
+
+    @media (min-width: 405px) and (max-width: 520px){
+      .main {
+        @apply flex-col justify-between;
+      }
+      
+      .sidebar {
+        @apply hidden;
+      }
+
+      .box {
+        @apply h-3/4 w-5/6;
+      }
+
+      .side-bottom, .header {
+        @apply w-full h-20 flex bg-gradient-to-br from-[rgba(255,255,255,.7)] to-[rgba(255,255,255,.2)] flex flex-col items-center justify-center;
+      }
+
+      .header {
+        @apply h-12 flex-row justify-center items-center;
+      }
+
+      .menus {
+        @apply w-full flex-row justify-evenly;
+      }
+
+      .menu {
+        @apply flex-col;
+      }
+
+      .menu i {
+        @apply text-4xl mr-0;
+      }
+
+      .content {
+        @apply h-full w-full flex items-center justify-center;
+      }
+
+      .content .info {
+        @apply flex flex-col justify-center items-center text-4xl text-sky-500;
+      }
+
+      .content .info p {
+        @apply text-2xl;
+      }
+      
+    }
+  </style>
+
 </head>
-<body class="font-['Poppins','sans-serif']">
-  <main class="w-screen h-screen bg-gradient-to-br from-sky-400 to-sky-300 flex justify-center items-center">
-    <section class="w-3/4 h-4/5 rounded-2xl bg-gradient-to-br from-[rgba(255,255,255,.8)] to-[rgba(255,255,255,.3)] flex shadow-xl shadow-sky-500">
+<body>
+  <main class="main">
+    <header class="header">
+      <img src="./assets/images/logoku.jpg" class="rounded-full w-7 h-7" alt="">
+      <h2 class="font-medium text-sm text-gray-800 ml-1">Rochmad Official</h2>
+    </header>
+
+    <section class="box">
       <!-- sidebar -->
-      <aside class="h-full w-1/4 rounded-tl-[inherit] rounded-bl-[inherit] bg-gradient-to-br from-[rgba(255,255,255,.7)] to-[rgba(255,255,255,.2)] flex flex-col items-center justify-evenly">
+      <aside class="sidebar">
         <!-- user -->
         <div class="flex flex-col items-center justify-center">
-          <img src="./assets/logoku.jpg" class="rounded-full w-[100px] h-[100px]" alt="">
+          <img src="./assets/images/logoku.jpg" class="rounded-full w-[100px] h-[100px]" alt="">
           <h2 class="font-medium text-lg text-gray-800 mt-2">Rochmad Official</h2>
           <p class="font-light text-md text-gray-600">"Pelajari, Pahami, Amalkan"</p>
         </div>
 
         <!-- menu -->
-        <nav class="flex flex-col gap-2 w-4/5">
-          <div class="flex items-center justify-between cursor-pointer text-white transition duration-300 bg-gradient-to-br shadow-md shadow-sky-600 from-sky-300 to-sky-500 hover:bg-gradient-to-br hover:from-sky-300 hover:to-sky-500 rounded-xl pt-1 pb-2 px-4">
-            <i class="ph-house-fill text-2xl mr-1 grow-1"></i>
-            <span class="text-lg grow-[2] font-semibold mt-1">Home</span>
+        <nav class="menus">
+          <div class="menu active">
+            <i class="ph-house-fill"></i>
+            <span>Home</span>
           </div>
           
-          <div class="flex items-center justify-between cursor-pointer text-gray-500 hover:text-white transition-colors duration-300 hover:shadow-md hover:shadow-sky-600 hover:bg-gradient-to-br hover:from-sky-300 hover:to-sky-500 rounded-xl pt-1 pb-2 px-4">
-            <i class="ph-grid-four-fill text-2xl mr-1 grow-1"></i>
-            <span class="text-lg grow-[2] font-light">Project</span>
+          <div class="menu">
+            <i class="ph-grid-four-fill"></i>
+            <span>Project</span>
           </div>
 
-          <div class="flex items-center justify-between cursor-pointer text-gray-500 hover:text-white transition-colors duration-300 hover:shadow-md hover:shadow-sky-600 hover:bg-gradient-to-br hover:from-sky-300 hover:to-sky-500 rounded-xl pt-1 pb-2 px-4">
-            <i class="ph-chalkboard-teacher-fill text-2xl mr-1 grow-1"></i>
-            <span class="text-lg grow-[2] font-light">Courses</span>
+          <div class="menu">
+            <i class="ph-chalkboard-teacher-fill"></i>
+            <span>Courses</span>
           </div>
 
-          <div class="flex items-center justify-between cursor-pointer text-gray-500 hover:text-white transition-colors duration-300 hover:shadow-md hover:shadow-sky-600 hover:bg-gradient-to-br hover:from-sky-300 hover:to-sky-500 rounded-xl pt-1 pb-2 px-4">
+          <div class="menu">
             <i class="ph-game-controller-fill text-2xl mr-1 grow-1"></i>
-            <span class="text-lg grow-[2] font-light mt-1">Mini Games</span>
+            <span>Mini Games</span>
           </div>
           
-          <div class="flex items-center justify-between cursor-pointer text-gray-500 hover:text-white transition-colors duration-300 hover:shadow-md hover:shadow-sky-600 hover:bg-gradient-to-br hover:from-sky-300 hover:to-sky-500 rounded-xl pt-1 pb-2 px-4">
+          <div class="menu">
             <i class="ph-info-fill text-2xl mr-1 grow-1"></i>
-            <span class="text-lg grow-[2] font-light">About</span>
+            <span>About</span>
           </div>
         </nav>
 
         <!-- footer -->
         <footer class="flex items-center justify-center">Made with <i class="ph-heart-fill text-red-500 text-2xl mx-1"></i>from Palu</footer>
       </aside>
+
       <!-- content -->
-      <div class="h-full w-3/4 flex items-center justify-center">
-        <article class="flex flex-col gap-2">
-          <div class="flex items-center text-4xl text-sky-500">
+      <div class="content">
+        <article class="flex flex-col gap-2 justify-center items-center">
+          <div class="info">
             <i class="ph-gear-fill animate-spin mx-2"></i>
-              Under Construction
+            <p class="text-center">Under Construction</p>
           </div>
 
           <div class="flex justify-center gap-2">
@@ -90,6 +195,30 @@
         </article>
       </div>
     </section>
+
+    <aside class="side-bottom">
+      <nav class="menus">
+        <div class="menu active">
+          <i class="ph-house-fill"></i>
+        </div>
+
+        <div class="menu">
+          <i class="ph-grid-four-fill"></i>
+        </div>
+
+        <div class="menu">
+          <i class="ph-chalkboard-teacher-fill"></i>
+        </div>
+
+        <div class="menu">
+          <i class="ph-game-controller-fill"></i>
+        </div>
+        
+        <div class="menu">
+          <i class="ph-info-fill"></i>
+        </div>
+      </nav>
+    </aside>
   </main>
 </body>
 </html>
