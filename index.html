@@ -69,7 +69,7 @@
       @apply hidden;
     }
 
-    @media (min-width: 405px) and (max-width: 520px){
+    @media (max-width: 520px){
       .main {
         @apply flex-col justify-between;
       }
@@ -114,6 +114,18 @@
         @apply text-2xl;
       }
       
+    }
+
+    @media (max-width: 404px) {
+      .menu {
+        @apply p-2;
+      }
+      .menu i {
+        @apply text-2xl;
+      }
+      .side-bottom{
+        @apply h-16;
+      }
     }
   </style>
 
